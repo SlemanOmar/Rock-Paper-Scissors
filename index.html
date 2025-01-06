@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+console.log("Rock Paper Scissor Best of Five !!!!")
+        let myPoints=0,hisPoints=0;
+    function getComputerChoice()
+        {
+        
+        let AIchoice=(Math.random(3)*3);
+         AIchoice=Math.floor(AIchoice);
+        
+let hisChoice;
+        
+            if(AIchoice==0)
+           hisChoice="rock";
+            else if(AIchoice==1)
+            hisChoice="paper";
+          else
+          hisChoice="scissor";
+           let Mychoice = prompt("Enter:");
+    
+
+    if((Mychoice=="rock") && (hisChoice=="rock")){
+            
+            console.log("Draw");myPoints+=0;
+        }
+            else if((Mychoice=="rock") && (hisChoice=="paper")){
+            hisPoints+=1;
+        console.log("Lose");
+        }
+            else if((Mychoice=="rock") && (hisChoice=="scissor")){
+            myPoints+=1;
+            console.log("Win");
+        }
+            else if((Mychoice=="paper") && (hisChoice=="rock")) {
+            myPoints+=1;
+            console.log("Win");
+        }
+            else if((Mychoice=="paper") && (hisChoice=="paper")){
+            myPoints+=0;
+            console.log("Draw");
+        }
+            else if((Mychoice=="paper") && (hisChoice=="scissor")){
+            hisPoints+=1;
+            console.log("Lose");
+        }
+            else if((Mychoice=="scissor") && (hisChoice=="rock")){
+            hisPoints+=1;
+            console.log("Lose");
+        }
+            else if((Mychoice=="scissor") && (hisChoice=="paper")){
+            myPoints+=1;
+            console.log("Win");
+        }
+            else if((Mychoice=="scissor") && (hisChoice=="scissor")){
+            myPoints+=0;
+            console.log("Draw");
+        }
+
+       }
+
+function Play()
+{
+ for (let i = 1; i < 6; i++) {
+    console.log(`Round ${i} :`)
+    getComputerChoice();
+
+ }
+
+ }
+
+
+
+Play();
+
+
+
+
+
+console.log(`Player score ${myPoints} and AI Score ${hisPoints}`);
+if(myPoints>hisPoints)
+console.log("You Won The Game");
+else if(myPoints<hisPoints)
+console.log("You Lost The Game");
+
+
+
+
+
+
+    </script>
+</body>
+</html>
